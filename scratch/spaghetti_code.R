@@ -29,6 +29,7 @@ full_data <- Q1 %>%
 full_data_k <- full_data %>% 
   filter(ions == "k")
 
+#i dont know whats going on here
 [i-4]:[i+4]
 
 #ggplot(data = full_data, aes(x = sample_date, y = concentration)) +
