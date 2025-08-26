@@ -1,0 +1,38 @@
+---
+title: "planning"
+format: html
+---
+
+Planning!
+
+From the paper:
+
+Time-series plots of rain inputs and streamwater concentrations are pre-
+sented as 9-wk moving averages
+
+Time-series plots of 9-wk moving-average streamwater concentrations before
+and after hurricane disturbance offer additional contrasts among watersheds
+and ions
+
+Moving averages were not plotted where there were gaps in sam-
+pling or in particular chemical analyses
+
+Annual watershed chemical outputs for the six streams where daily stream-
+flow measures were available (i.e. all except QPA and QPB) were determined
+in the following manner. Linear regressions were developed between the logar-
+ithm of sampling-day streamflow and the chemical concentrations for each
+stream, ion and year. Where these regressions were statistically significant (P
+< 0.05), they were used to estimate chemical concentrations on the days not
+sampled, based on streamflows for those days. The resulting daily concentra-
+tions were multiplied by daily streamflow, summed over the entire year, and
+expressed as kg ha−1 y−1. Where these regressions were not significant, average
+concentrations were multiplied by daily streamflows for the appropriate year
+and stream.
+
+For our flux calculations, years were defined
+by the date of Hurricane Hugo; for example 1990 began on 19 September 1989
+and ended on 18 September 1990.
+
+Caption:
+
+Figure 3. Concentrations in Bisley, Puerto Rico streams before and after Hurricane Hugo, 9-wk moving averages. (a) potassium, (b) nitrate-N, (c) magnesium, (d) calcium and (e) ammonium-N. The vertical lines mark the time of hurricane disturbance.
