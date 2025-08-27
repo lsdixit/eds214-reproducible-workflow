@@ -112,7 +112,7 @@ data_k_loop <-
 source("moving_average.R")
 
 
-PRM$no3_n_moving <- sapply(
+PRM$no3_n <- sapply(
   PRM$sample_date,
   moving_average,
   dates = PRM$sample_date,
@@ -120,5 +120,43 @@ PRM$no3_n_moving <- sapply(
   win_size_wks = 9
 )
 
-ggplot(PRM, aes(x = sample_date, y = no3_n_moving)) +
-  geom_line(aes(color=sample_id))
+PRM$k <- sapply(
+  PRM$sample_date,
+  moving_average,
+  dates = PRM$sample_date,
+  conc = PRM$k,
+  win_size_wks = 9
+)
+
+PRM$mg <- sapply(
+  PRM$sample_date,
+  moving_average,
+  dates = PRM$sample_date,
+  conc = PRM$mg,
+  win_size_wks = 9
+)
+
+PRM$ca <- sapply(
+  PRM$sample_date,
+  moving_average,
+  dates = PRM$sample_date,
+  conc = PRM$ca,
+  win_size_wks = 9
+)
+
+PRM$nh4_n <- sapply(
+  PRM$sample_date,
+  moving_average,
+  dates = PRM$sample_date,
+  conc = PRM$nh4_n,
+  win_size_wks = 9
+)
+
+PRM <- PRM %>% 
+  pivot_longer("no3_n":"nh4_n", # pivot concentrations and values to be long
+               names_to = "ions",
+               values_to = "concentration")
+
+ggplot(PRM, aes(x = sample_date, y = concentration)) +
+  geom_line() +
+  facet_wrap(~ions)
