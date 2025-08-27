@@ -43,8 +43,10 @@ full_data_k <- full_data %>%
   mutate(sample_date = ymd(sample_date)) %>% 
   mutate(sample_date_28 = sample_date + days(28))
 
+
 full_data_nh4 <- full_data %>% 
   filter(ions == "nh4_n")
+
 
 # try plotting it
 #ggplot(data = full_data, aes(x = sample_date, y = concentration)) +
@@ -104,3 +106,19 @@ data_k_loop <-
   mutate(moving_mean = mean(concentration))
   ungroup()
 }
+#########################################################-
+#########################################################-
+
+source("moving_average.R")
+
+
+PRM$no3_n_moving <- sapply(
+  PRM$sample_date,
+  moving_average,
+  dates = PRM$sample_date,
+  conc = PRM$no3_n,
+  win_size_wks = 9
+)
+
+ggplot(PRM, aes(x = sample_date, y = no3_n_moving)) +
+  geom_line(aes(color=sample_id))
