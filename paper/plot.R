@@ -17,4 +17,4 @@ ggplot(full_data, aes(x = sample_date, y = concentration)) +
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())
 
-ggsave(here("figs", "figure 3.png"))
+ggsave(here("figs", "figure-3.jpg"))
