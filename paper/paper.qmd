@@ -17,18 +17,23 @@ These concentrations are calculated as 9 week moving averages.
 ## Results
 ```{r}
 #| echo: false
+# read in packages
 library(here)
 library(tidyverse)
+# source the plot function
 source(here("R", "plot.R"))
+# read in clean data
 full_data <- read_csv(here("output", "full_data.csv"))
 ```
 
 ```{r}
+# apply the plot function with the data and parameters
 hurricane_ions_plot(full_data, sample_date, concentration)
 ```
 
 ```{r}
 #| echo: false
+# saves the final plot into the figures folder
 ggsave(here("figs", "figure-3.jpg"))
 ```
 

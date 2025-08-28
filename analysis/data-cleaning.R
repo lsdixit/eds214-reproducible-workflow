@@ -188,8 +188,9 @@ full_data <- Q1 %>%
   full_join(PRM) %>% 
   pivot_longer("no3_n":"nh4_n", # pivot concentrations and values to be long
                names_to = "ions",
-               values_to = "concentration")
+               values_to = "concentration") %>% 
+  filter(sample_date < ymd("1994-07-01"))
 
-# export full data csv file to data clean folder
+#.........export full data csv file to data clean folder.........
 write.csv(full_data, file='output/full_data.csv')
 
