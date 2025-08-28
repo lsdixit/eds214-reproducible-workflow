@@ -9,11 +9,26 @@ This analysis is based on the paper by Shaefer et. al. 2000 "Effects of hurrican
 In this analysis, we are creating a workflow to recreate Figure 3. This plot shows the ion concentrations for 5 ions (NH4-N, Ca, Mg, NO3-N, and K) over time, separated by the four Bisley, Puerto Rico streams. 
 
 ## Data
-These data and associated metadata can be found here [https://doi.org/10.1017/s0266467400001358]. This analysis consists of only four stream sites: MPR, Q1, Q2, and Q3. These are all from the Bisley, Puerto Rico watershed area.
+These data and associated metadata can be found here https://doi.org/10.6073/PASTA/F31349BEBDC304F758718F4798D25458. These data run from 1986-2020, with weekly water sampling for various ion concentrations. This analysis consists of only four stream sites: MPR, Q1, Q2, and Q3. These are all from the Bisley, Puerto Rico watershed area. Chemical concentrations are recorded as mg/L or mg/L as appropriate. Values below detection limits are recorded as 1/2 the detection limit.
 
 ## Methods
-Data are pulled from [![DOI]https://doi.org/10.6073/PASTA/F31349BEBDC304F758718F4798D25458
 These concentrations are calculated as 9 week moving averages.
 
 ## Results
+```{r}
+#| echo: false
+library(here)
+library(tidyverse)
+source(here("R", "plot.R"))
+full_data <- read_csv(here("output", "full_data.csv"))
+```
+
+```{r}
+hurricane_ions_plot(full_data, sample_date, concentration)
+```
+
+```{r}
+#| echo: false
+ggsave(here("figs", "figure-3.jpg"))
+```
 

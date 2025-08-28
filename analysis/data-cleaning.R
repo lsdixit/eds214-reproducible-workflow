@@ -187,4 +187,5 @@ full_data <- Q1 %>%
                values_to = "concentration")
 
 # export full data csv file to data clean folder
-write.csv(full_data, file='data/data_clean/full_data.csv')
+write.csv(full_data, file='output/full_data.csv')
+
