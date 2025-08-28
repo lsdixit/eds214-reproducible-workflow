@@ -16,3 +16,5 @@ ggplot(full_data, aes(x = sample_date, y = concentration)) +
         panel.spacing = unit(0, "lines"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())
+
+ggsave(here("figs", "figure 3.png"))
