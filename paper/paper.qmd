@@ -12,7 +12,7 @@ In this analysis, we are creating a workflow to recreate Figure 3. This plot sho
 These data and associated metadata can be found here [https://doi.org/10.1017/s0266467400001358]. This analysis consists of only four stream sites: MPR, Q1, Q2, and Q3. These are all from the Bisley, Puerto Rico watershed area.
 
 ## Methods
-Data are pulled from 
+Data are pulled from [![DOI]https://doi.org/10.6073/PASTA/F31349BEBDC304F758718F4798D25458
 These concentrations are calculated as 9 week moving averages.
 
 ## Results
