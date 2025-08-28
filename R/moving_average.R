@@ -23,6 +23,6 @@ moving_average <- function(focal_date, dates, conc, win_size_wks) {
   window_conc <- conc[is_in_window]
   # Calculate the mean
   result <- mean(window_conc)
-  
+  # returns the moving average
   return(result)
 }
