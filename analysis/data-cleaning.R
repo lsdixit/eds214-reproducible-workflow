@@ -1,4 +1,17 @@
-# read in each site's data
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##                                                                            ~~
+##               READ, CLEAN, APPLY FUNCTIONS, AND COMBINE DATA             ----
+##                                                                            ~~
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#........................read in packages........................
+library(tidyverse)
+library(janitor)
+library(here)
+
+#....................read in each site's data....................
 # keep only the following columns
   # Sample ID
   # Sample Date
@@ -16,12 +29,12 @@ PRM <- read_csv(here("data", "data_raw", "RioMameyesPuenteRoto.csv"))%>%
   select(Sample_ID, Sample_Date, "NO3-N", K, Mg, Ca, "NH4-N")%>% 
   clean_names()
 
-# source the moving average function from its R script
+#......source the moving average function from its R script......
 source(here("R", "moving_average.R"))
 
 # PRM site
-PRM$no3_n <- sapply(
-  PRM$sample_date,
+PRM$no3_n <- sapply( # sapply() is a function that applies a function to a whole data frame
+  PRM$sample_date,   # apply the moving mean to the same column name, overwriting original data
   moving_average,
   dates = PRM$sample_date,
   conc = PRM$no3_n,
@@ -60,16 +73,7 @@ PRM$nh4_n <- sapply(
   win_size_wks = 9
 )
 
-PRM <- PRM %>% 
-  pivot_longer("no3_n":"nh4_n", # pivot concentrations and values to be long
-               names_to = "ions",
-               values_to = "concentration")
-
-ggplot(PRM, aes(x = sample_date, y = concentration)) +
-  geom_line() +
-  facet_wrap(~ions)
-
-# Q1 sites
+# Q1 site
 Q1$no3_n <- sapply(
   Q1$sample_date,
   moving_average,
@@ -141,7 +145,7 @@ Q2$nh4_n <- sapply(
   conc = Q2$nh4_n,
   win_size_wks = 9
 )
-# Q3
+# Q3 site
 Q3$no3_n <- sapply(
   Q3$sample_date,
   moving_average,
@@ -177,7 +181,7 @@ Q3$nh4_n <- sapply(
   conc = Q3$nh4_n,
   win_size_wks = 9
 )
-# join code
+#........join all 4 sites together into a long data frame........
 full_data <- Q1 %>% 
   full_join(Q2) %>% 
   full_join(Q3) %>% 
