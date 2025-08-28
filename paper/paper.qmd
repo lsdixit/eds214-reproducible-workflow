@@ -9,7 +9,7 @@ This analysis is based on the paper by Shaefer et. al. 2000 "Effects of hurrican
 In this analysis, we are creating a workflow to recreate Figure 3. This plot shows the ion concentrations for 5 ions (NH4-N, Ca, Mg, NO3-N, and K) over time, separated by the four Bisley, Puerto Rico streams. 
 
 ## Data
-These data and associated metadata can be found [insert link here]. This analysis consists of only four stream sites: MPR, Q1, Q2, and Q3. These are all from the Bisley, Puerto Rico watershed area.
+These data and associated metadata can be found here [https://doi.org/10.1017/s0266467400001358]. This analysis consists of only four stream sites: MPR, Q1, Q2, and Q3. These are all from the Bisley, Puerto Rico watershed area.
 
 ## Methods
 These concentrations are calculated as 9 week moving averages.
