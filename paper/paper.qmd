@@ -1,0 +1,18 @@
+---
+title: "manuscript"
+format: html
+---
+
+## Background
+This analysis is based on the paper by Shaefer et. al. 2000 "Effects of hurricane disturbance on stream water concentrations and fluxes in eight tropical forest watersheds of the Luquillo Experimental Forest, Puerto Rico". In this study they assessed effects of tropical hurricanes on stream water chemistry in various watersheds of the Luquillo Experimental Forest (LEF) in Puerto Rico. They specifically looked at the effects after the 1989 Hurricane Hugo.
+
+In this analysis, we are creating a workflow to recreate Figure 3. This plot shows the ion concentrations for 5 ions (NH4-N, Ca, Mg, NO3-N, and K) over time, separated by the four Bisley, Puerto Rico streams. 
+
+## Data
+These data and associated metadata can be found [insert link here]. This analysis consists of only four stream sites: MPR, Q1, Q2, and Q3. These are all from the Bisley, Puerto Rico watershed area.
+
+## Methods
+These concentrations are calculated as 9 week moving averages.
+
+## Results
+
