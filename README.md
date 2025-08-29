@@ -1,6 +1,6 @@
 # EDS 214: Reproducible Workflow
 
-![Reproduced Figure 3](figs/figure-3.jpg)
+![Reproduced Figure 3: concentrations for Bisley, Puerto Rico before and after Hurricane Hugo, 9 week moving averages.](figs/figure-3.jpg)
 
 ## Background
 This repository contains the code for the EDS 214 class project on reproducible workflows. This project is based on the paper by Schaefer et. al. 2000, assessing the effects of hurricane disturbance on stream water concentrations in the forest watersheds of Puerto Rico. We are reproducing figure 3 from the paper and documenting our workflow.
