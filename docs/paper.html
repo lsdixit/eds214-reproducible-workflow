@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>manuscript</title>
+<title>Reproducing Figure 3 from Shaefer et al 2000.</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -81,7 +81,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">manuscript</h1>
+<h1 class="title">Reproducing Figure 3 from Shaefer et al 2000.</h1>
 </div>
 
 
@@ -114,6 +114,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="results" class="level2">
 <h2 class="anchored" data-anchor-id="results">Results</h2>
 <p>Source the function from <a href="https://github.com/lsdixit/eds214-reproducible-workflow/blob/main/R/moving_average.R">moving_average.R</a></p>
+<p>Data are found in the <a href="https://github.com/lsdixit/eds214-reproducible-workflow/tree/main/output">Output folder.</a> Data are limited for the MPR site and for the NH4 ion prior to 1989.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># apply the plot function with the data and parameters</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hurricane_ions_plot</span>(full_data, sample_date, concentration)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -125,6 +126,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<p>This plot shows continuous date on the x axis, and 5 different ion concentrations on the y axis. Each line represents one of the 4 sites measured. The vertical dashed line indicated the dates of Hurricane Hugo in 1989.</p>
+<p>We can see that for most ions and sites, concentrations increased following Hurricane Hugo and stayed increased for several months, if not longer.</p>
 </section>
 
 </main>

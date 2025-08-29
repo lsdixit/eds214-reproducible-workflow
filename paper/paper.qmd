@@ -1,5 +1,5 @@
 ---
-title: "manuscript"
+title: "Reproducing Figure 3 from Shaefer et al 2000."
 format: html
 editor_options: 
   chunk_output_type: console
@@ -32,6 +32,9 @@ full_data <- read_csv(here("output", "full_data.csv"))
 ```
 
 Source the function from [moving_average.R](https://github.com/lsdixit/eds214-reproducible-workflow/blob/main/R/moving_average.R)
+
+Data are found in the [Output folder.](https://github.com/lsdixit/eds214-reproducible-workflow/tree/main/output) Data are limited for the MPR site and for the NH4 ion prior to 1989. 
+
 ```{r}
 #| warning: false
 # apply the plot function with the data and parameters
@@ -45,3 +48,6 @@ hurricane_ions_plot(full_data, sample_date, concentration)
 ggsave(here("figs", "figure-3.jpg"))
 ```
 
+This plot shows continuous date on the x axis, and 5 different ion concentrations on the y axis. Each line represents one of the 4 sites measured. The vertical dashed line indicated the dates of Hurricane Hugo in 1989.
+
+We can see that for most ions and sites, concentrations increased following Hurricane Hugo and stayed increased for several months, if not longer.  
