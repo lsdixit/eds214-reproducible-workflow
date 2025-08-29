@@ -11,20 +11,20 @@ This work is done by Leela Dixit, in collaboration with Max Czapanskiy, Alessand
 
 ## Contents
 ### 1) Data
-- [:file\_folder: data](): raw data for all 4 sites sampled and used in reproduced figure.
+- [:file\_folder: data](https://github.com/lsdixit/eds214-reproducible-workflow/tree/main/data): raw data for all 4 sites sampled and used in reproduced figure.
 
 ### 2) Supporting Code
 [02_data-cleaning.R](https://github.com/lsdixit/eds214-reproducible-workflow/blob/main/02_data-cleaning.R) This script contains the loading and all combining and modifying of the 4 raw data files. 
 
-- [:file\_folder: figs](): R scripts containing functions for 9 week moving average and plots.
+- [:file\_folder: R](https://github.com/lsdixit/eds214-reproducible-workflow/tree/main/R): R scripts containing functions for 9 week moving average and plots.
 
 ### 3) Figures
-- [:file\_folder: figs](): final reproduced plot saved as a .jpg.
+- [:file\_folder: figs](https://github.com/lsdixit/eds214-reproducible-workflow/tree/main/figs): final reproduced plot saved as a .jpg.
 
 ### 4) Outputs
-- [:file\_folder: output](): clean data following tidy, wrangling, and 9 week moving average calculation. These data were used in creation of the figure 3 plot.
+- [:file\_folder: output](https://github.com/lsdixit/eds214-reproducible-workflow/tree/main/output): clean data following tidy, wrangling, and 9 week moving average calculation. These data were used in creation of the figure 3 plot.
 
-- [:file\_folder: paper](): Quarto document of full project description, methods, and results.
+- [:file\_folder: paper](https://github.com/lsdixit/eds214-reproducible-workflow/tree/main/paper): Quarto document of full project description, methods, and results.
 
 ## Workflow
 ![Workflow Flowchat](figs/flowchart_workflow.jpg)
