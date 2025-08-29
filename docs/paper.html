@@ -105,15 +105,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="data" class="level2">
 <h2 class="anchored" data-anchor-id="data">Data</h2>
-<p>These data and associated metadata can be found <a href="https://doi.org/10.6073/PASTA/F31349BEBDC304F758718F4798D25458">here</a>. These data run from 1986-2020, with weekly water sampling for various ion concentrations. This analysis consists of only four stream sites: MPR, Q1, Q2, and Q3. These are all from the Bisley, Puerto Rico watershed area. Chemical concentrations are recorded as mg/L or mg/L as appropriate. Values below detection limits are recorded as 1/2 the detection limit.</p>
+<p>These data and associated metadata can be found <a href="https://doi.org/10.6073/PASTA/F31349BEBDC304F758718F4798D25458">on Environmental Data Initiative</a>. These data run from 1986-2020, with weekly water sampling for various ion concentrations. This analysis consists of only four stream sites: MPR, Q1, Q2, and Q3. These are all from the Bisley, Puerto Rico watershed area. Chemical concentrations are recorded as mg/L or ug/L as appropriate. Values below detection limits are recorded as 1/2 the detection limit.</p>
 </section>
 <section id="methods" class="level2">
 <h2 class="anchored" data-anchor-id="methods">Methods</h2>
 <p>Packages used were loaded from the <a href="https://github.com/lsdixit/eds214-reproducible-workflow/blob/main/01_environment-installation.R">01_environment-installation.R</a>. All four data frames were read in, cleaned, and the moving average function applied to each individually in the <a href="https://github.com/lsdixit/eds214-reproducible-workflow/blob/main/02_data-cleaning.R">02_data-cleaning.R</a> file.</p>
+<p>Source the function to calculate moving avergae from <a href="https://github.com/lsdixit/eds214-reproducible-workflow/blob/main/R/moving_average.R">moving_average.R</a></p>
 </section>
 <section id="results" class="level2">
 <h2 class="anchored" data-anchor-id="results">Results</h2>
-<p>Source the function from <a href="https://github.com/lsdixit/eds214-reproducible-workflow/blob/main/R/moving_average.R">moving_average.R</a></p>
 <p>Data are found in the <a href="https://github.com/lsdixit/eds214-reproducible-workflow/tree/main/output">Output folder.</a> Data are limited for the MPR site and for the NH4 ion prior to 1989.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># apply the plot function with the data and parameters</span></span>

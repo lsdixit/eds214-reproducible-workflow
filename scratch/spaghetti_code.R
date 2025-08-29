@@ -310,3 +310,20 @@ legend.position = c(0.8, 0.3)
 legend.title=element_blank(),
 legend.background = element_blank(),
 legend.key=element_blank())
+
+PRM_test <- read_csv(here("data", "RioMameyesPuenteRoto.csv"))%>% 
+  select(Sample_ID, Sample_Date, "NO3-N", K, Mg, Ca, "NH4-N")%>% 
+  clean_names()
+
+for (i in 1:ncol(PRM_test)) {
+  for (j in seq_along(PRM_test$sample_date)) {
+    PRM_test[[i]] <- sapply(
+      PRM_test$sample_date[j],
+      moving_average,
+      dates = PRM_test$sample_date,
+      conc = PRM_test[[i]],
+      win_size_wks = 9
+    )
+  }
+}
+
