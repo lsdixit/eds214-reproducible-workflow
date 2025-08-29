@@ -304,3 +304,9 @@ ggplot(full_data, aes(x = sample_date, y = concentration)) +
   facet_grid(rows = vars(ions)) +
   theme(strip.placement = "right")+
   theme_bw()
+
+
+legend.position = c(0.8, 0.3)
+legend.title=element_blank(),
+legend.background = element_blank(),
+legend.key=element_blank())

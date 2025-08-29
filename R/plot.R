@@ -18,10 +18,15 @@ hurricane_ions_plot <- function(full_data, sample_date, concentration) {
   # following code is the ggplot!
   ggplot(full_data, aes(x = sample_date, y = concentration)) +
     geom_line(aes(color = sample_id)) + # separates sites into different lines
-    scale_color_manual(values = c("#3C153B", "#89BD9E", "#F0C987", "#DB4C40")) +
+    scale_color_manual("Site", values = c("#3C153B", "#89BD9E", "#F0C987", "#DB4C40")) +
     facet_wrap(~ions, ncol = 1,  # wrap graphs by type of ion
                scales = "free_y",  # y axis is not static
-               strip.position = "left") + # y axis labels are on the left
+               strip.position = "left",
+               labeller = as_labeller(c(no3_n = "NO3-N ug/L", 
+                                        ca = "Ca mg/L",
+                                        nh4_n = "NH4-N ug/L",
+                                        mg = "Mg mg/L",
+                                        k = "K mg/L"))) + # y axis labels are on the left
     # adds a vertical line indicating when Hurricane Hugo occured
     geom_vline(xintercept = hurricane_date, linetype = "dashed") + 
     theme_bw() + # base r populated themes
@@ -32,5 +37,6 @@ hurricane_ions_plot <- function(full_data, sample_date, concentration) {
           panel.spacing = unit(0, "lines"), # removes space between faceted plots
           panel.grid.major = element_blank(), # removes major grid lines
           panel.grid.minor = element_blank()) + # removes minor grid lines
-    labs()
+    labs(x = "Date",
+         title = "Ion concentrations in Bisley, Puerto Rico following Hurricane Hugo",)
 }

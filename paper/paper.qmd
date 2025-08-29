@@ -1,6 +1,8 @@
 ---
 title: "manuscript"
 format: html
+editor_options: 
+  chunk_output_type: console
 ---
 
 ## Background
@@ -31,12 +33,14 @@ full_data <- read_csv(here("output", "full_data.csv"))
 
 Source the function from [moving_average.R](https://github.com/lsdixit/eds214-reproducible-workflow/blob/main/R/moving_average.R)
 ```{r}
+#| warning: false
 # apply the plot function with the data and parameters
 hurricane_ions_plot(full_data, sample_date, concentration)
 ```
 
 ```{r}
 #| echo: false
+#| message: FALSE
 # saves the final plot into the figures folder
 ggsave(here("figs", "figure-3.jpg"))
 ```
