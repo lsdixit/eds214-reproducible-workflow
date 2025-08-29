@@ -14,7 +14,7 @@ This work is done by Leela Dixit, in collaboration with Max Czapanskiy, Alessand
 - [:file\_folder: data](): raw data for all 4 sites sampled and used in reproduced figure.
 
 ### 2) Supporting Code
- This script contains the loading and all combining and modifying of the 4 raw data files. 
+[02_data-cleaning.R](https://github.com/lsdixit/eds214-reproducible-workflow/blob/main/02_data-cleaning.R) This script contains the loading and all combining and modifying of the 4 raw data files. 
 
 - [:file\_folder: figs](): R scripts containing functions for 9 week moving average and plots.
 

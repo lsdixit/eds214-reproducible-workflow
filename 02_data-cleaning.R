@@ -16,21 +16,23 @@ library(here)
   # Sample ID
   # Sample Date
   # the following ion concentrations: NO3-N, K, Mg, Ca, Nh4-N
-Q1 <- read_csv(here("data", "data_raw", "QuebradaCuenca1-Bisley.csv")) %>% 
+Q1 <- read_csv(here("data", "QuebradaCuenca1-Bisley.csv")) %>% 
   select(Sample_ID, Sample_Date, "NO3-N", K, Mg, Ca, "NH4-N") %>% 
   clean_names()
-Q2 <- read_csv(here("data", "data_raw", "QuebradaCuenca2-Bisley.csv"))%>% 
+Q2 <- read_csv(here("data", "QuebradaCuenca2-Bisley.csv"))%>% 
   select(Sample_ID, Sample_Date, "NO3-N", K, Mg, Ca, "NH4-N")%>% 
   clean_names()
-Q3 <- read_csv(here("data", "data_raw", "QuebradaCuenca3-Bisley.csv"))  %>% 
+Q3 <- read_csv(here("data", "QuebradaCuenca3-Bisley.csv"))  %>% 
   select(Sample_ID, Sample_Date, "NO3-N", K, Mg, Ca, "NH4-N")%>% 
   clean_names()
-PRM <- read_csv(here("data", "data_raw", "RioMameyesPuenteRoto.csv"))%>% 
+PRM <- read_csv(here("data", "RioMameyesPuenteRoto.csv"))%>% 
   select(Sample_ID, Sample_Date, "NO3-N", K, Mg, Ca, "NH4-N")%>% 
   clean_names()
 
 #......source the moving average function from its R script......
 source(here("R", "moving_average.R"))
+
+# author note: developing a for loop for the following function applications would help de-clutter this code, when time allows.
 
 # PRM site
 PRM$no3_n <- sapply( # sapply() is a function that applies a function to a whole data frame

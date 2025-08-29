@@ -17,7 +17,8 @@ hurricane_ions_plot <- function(full_data, sample_date, concentration) {
   hurricane_date <- ymd("1989-09-18") 
   # following code is the ggplot!
   ggplot(full_data, aes(x = sample_date, y = concentration)) +
-    geom_line(aes(linetype = sample_id)) + # separates sites into different lines
+    geom_line(aes(color = sample_id)) + # separates sites into different lines
+    scale_color_manual(values = c("#3C153B", "#89BD9E", "#F0C987", "#DB4C40")) +
     facet_wrap(~ions, ncol = 1,  # wrap graphs by type of ion
                scales = "free_y",  # y axis is not static
                strip.position = "left") + # y axis labels are on the left
@@ -30,5 +31,6 @@ hurricane_ions_plot <- function(full_data, sample_date, concentration) {
           axis.title.y = element_blank(), # removes overall y axis title (which was concentration)
           panel.spacing = unit(0, "lines"), # removes space between faceted plots
           panel.grid.major = element_blank(), # removes major grid lines
-          panel.grid.minor = element_blank()) # removes minor grid lines
+          panel.grid.minor = element_blank()) + # removes minor grid lines
+    labs()
 }
