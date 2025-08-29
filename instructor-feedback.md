@@ -19,3 +19,54 @@ https://github.com/austinmartinez12/eds214-day1-tasks1/issues/13#issue-336470769
 
 Resolved a merge conflict.
 https://github.com/lsdixit/eds214-reproducible-workflow/commit/ded063837e0cae7e7b808648756f114e614fa477
+
+
+# Instructor feedback
+
+## Automate
+
+[M] **Running the entire analysis requires rendering one Quarto document**
+
+[M] The analysis runs without errors
+
+[E] **The analysis produces the expected output**
+
+[M] **Data import/cleaning is handled in its own script(s)**
+
+## Organize
+
+[M] Raw data is contained in its own folder
+
+[M] Intermediate outputs are created and saved to a separate folder from raw data
+
+[E] **At least one piece of functionality has been refactored into a function in its own file**
+
+## Document
+
+[M] The repo has a README that explains where to find (1) data, (2) analysis script, (3) supporting code, and (4) outputs
+
+[M] **The README includes a flowchart and text explaining how the analysis works**
+
+[M] **The code is appropriately commented**
+
+[M] **Variable and function names are descriptive and follow a consistent naming convention**
+
+## Scale
+
+After cloning the repo on Workbench:
+
+[M] Running the environment initialization script installs all required packages
+
+[M] The analysis script runs without errors
+
+## Collaborate
+
+[E] **The student has provided attentive, constructive feedback in a peer review**
+
+[M] **The student has contributed to a peer's repo by opening an issue and creating a pull request**
+
+[M] The repo has at least three closed GitHub issues
+
+[M] The commit history includes at least one merged branch and a resolved merge conflict
+
+[M] The rendered analysis is accessible via GitHub Pages
